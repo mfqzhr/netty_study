@@ -1,7 +1,4 @@
 package com.mfq.bio.client;
-
-import sun.tools.java.Environment;
-
 import java.io.IOException;
 import java.net.Socket;
 import java.util.Date;

@@ -8,6 +8,7 @@
         <artifactId>netty_study</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
+    <packaging>pom</packaging>
 
     <artifactId>bio</artifactId>
 
