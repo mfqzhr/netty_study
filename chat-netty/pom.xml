@@ -9,4 +9,11 @@
     <artifactId>chat-netty</artifactId>
     <name>Archetype - chat-netty</name>
     <url>http://maven.apache.org</url>
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>4.5.14</version>
+        </dependency>
+    </dependencies>
 </project>
