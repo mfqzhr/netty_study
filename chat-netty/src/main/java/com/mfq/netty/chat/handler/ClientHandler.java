@@ -4,6 +4,7 @@ import com.mfq.netty.chat.codec.PacketCodeC;
 import com.mfq.netty.chat.net.packet.Packet;
 import com.mfq.netty.chat.net.request.LoginRequestPacket;
 import com.mfq.netty.chat.net.response.LoginResponsePacket;
+import com.mfq.netty.chat.util.LoginUtils;
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
@@ -35,6 +36,7 @@ public class ClientHandler extends ChannelInboundHandlerAdapter {
         if (packet instanceof LoginResponsePacket) {
             LoginResponsePacket loginResponsePacket = (LoginResponsePacket) packet;
             if (loginResponsePacket.isSuccess()) {
+                LoginUtils.markAsLogin(ctx.channel());
                 System.out.println(new Date() + " : 客户端登录成功");
             } else {
                 System.out.println(new Date() + " : 客户端登录失败");

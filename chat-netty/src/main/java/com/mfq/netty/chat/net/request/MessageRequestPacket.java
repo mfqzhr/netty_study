@@ -8,6 +8,7 @@ import lombok.EqualsAndHashCode;
 @EqualsAndHashCode(callSuper = true)
 @Data
 public class MessageRequestPacket extends Packet {
+    private String message;
     @Override
     public Byte getCommand() {
         return CommandConstants.MESSAGE_REQUEST;

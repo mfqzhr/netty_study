@@ -1,6 +1,7 @@
 package com.mfq.netty.chat.codec;
 
 import com.mfq.netty.chat.constants.SerializerAlgorithmConstants;
+import com.mfq.netty.chat.net.request.MessageRequestPacket;
 import com.mfq.netty.chat.net.response.LoginResponsePacket;
 import com.mfq.netty.chat.serializer.JSONSerializer;
 import com.mfq.netty.chat.serializer.Serializer;
@@ -71,6 +72,9 @@ public class PacketCodeC {
         }
         if (command == CommandConstants.LOGIN_IN_RESPONSE) {
             return LoginResponsePacket.class;
+        }
+        if (command == CommandConstants.MESSAGE_REQUEST) {
+            return MessageRequestPacket.class;
         }
         return null;
     }
